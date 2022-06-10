@@ -2,6 +2,7 @@
 1. front end application: init project(create-react-app)
 2. backend application
 3. ci/cd: init ci/ci(GitHub Actions)
+   build -> test -> deploy
 4. deploy to AWS
 
 START TO IMPROVE THE CODE
