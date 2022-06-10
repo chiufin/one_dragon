@@ -1,12 +1,13 @@
 # One dragon
-1. application: create-react-app
-2. ci/cd: GitHub Actions
-3. deploy to AWS
+1. front end application: init project(create-react-app)
+2. backend application
+3. ci/cd: init ci/ci(GitHub Actions)
+4. deploy to AWS
 
 START TO IMPROVE THE CODE
 
-4. end to end testing
-5. typescript
+5. end to end testing
+6. typescript
 
 node v16.15.1 (npm v8.11.0)
 
