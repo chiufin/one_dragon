@@ -4,6 +4,7 @@
 3. deploy to AWS
 
 START TO IMPROVE THE CODE
+
 4. end to end testing
 5. typescript
 
