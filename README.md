@@ -1,9 +1,9 @@
 # One dragon
 1. front end application: init project(create-react-app)
 2. backend application
-3. ci/cd: init ci/ci(GitHub Actions)
+3. ci/cd: init ci/ci(GitHub Actions, Github Repository secrets)
    build -> test -> deploy
-4. deploy to AWS
+4. deploy to heroku (because it is free)
 
 START TO IMPROVE THE CODE
 
