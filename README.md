@@ -1,3 +1,16 @@
+# One dragon
+1. application: create-react-app
+2. ci/cd: GitHub Actions
+3. deploy to AWS
+
+START TO IMPROVE THE CODE
+4. end to end testing
+5. typescript
+
+node v16.15.1 (npm v8.11.0)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
