@@ -43,9 +43,5 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16.x
-    - uses: borales/actions-yarn@v3.0.0
-      with:
-        cmd: install
-    - run: yarn add create-react-app --location=global
-    - run: yarn build
-    - run: yarn test
+    - run: npm build
+    - run: npm test
