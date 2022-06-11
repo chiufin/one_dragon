@@ -8,7 +8,11 @@ import ReactGA from 'react-ga';
 function App() {
   useEffect(() => {
     console.log(process.env.REACT_APP_GA);
-    ReactGA.initialize(process.env.REACT_APP_GA);
+    ReactGA.initialize(process.env.REACT_APP_GA, {
+      gaOptions: {
+        siteSpeedSampleRate: 100,
+      }
+    });
     ReactGA.pageview(window.location.pathname + window.location.search);
   });
   return (
