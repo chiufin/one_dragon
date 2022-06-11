@@ -43,6 +43,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16.x
-    - run: npm install create-react-app -g
+    - run: npm install create-react-app --location=global
     - run: npm run build --if-present
     - run: npm test
