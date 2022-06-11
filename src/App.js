@@ -11,24 +11,28 @@ const images = [image1, image2, image3, image4, image5 ];
 
 function App() {
   const [imageIndex, setImageIndex] = useState(Math.floor(Math.random() * images.length));
-  fetch(process.env.REACT_APP_BACKEND, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-    },
-    body: JSON.stringify({query: "{ hello }"})
-  })
-    .then(r => r.json())
-    .then(data => console.log('data returned:', data));
+  const [apiData, setApiData] = useState('');
+
   useEffect(() => {
-    console.log(process.env.REACT_APP_GA);
     ReactGA.initialize(process.env.REACT_APP_GA, {
       gaOptions: {
         siteSpeedSampleRate: 100,
       }
     });
     ReactGA.pageview(window.location.pathname + window.location.search);
+    fetch(process.env.REACT_APP_BACKEND, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({query: "{ hello }"})
+    })
+      .then(r => r.json())
+      .then(data => {
+        console.log('data returned:', data);
+        setApiData(data?.data?.hello);
+      });
   });
   return (
     <div
@@ -49,6 +53,7 @@ function App() {
         <p>
           Staccc's petite app
         </p>
+        <p>from graphql: {apiData}</p>
       </header>
     </div>
   );
