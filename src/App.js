@@ -3,10 +3,12 @@ import logo from './logo.png';
 import './App.css';
 import ReactGA from 'react-ga';
 
-ReactGA.initialize(process.env.REACT_APP_GA);
+
 
 function App() {
   useEffect(() => {
+    console.log(process.env.REACT_APP_GA);
+    ReactGA.initialize(process.env.REACT_APP_GA);
     ReactGA.pageview(window.location.pathname + window.location.search);
   });
   return (
