@@ -45,6 +45,6 @@ jobs:
         node-version: 16.x
         cache: 'yarn'
     - run: echo "🍏 This job's status is ${{ job.status }}."
-    # - run: npm ci
-    # - run: yarn build
+    - run: yarn
+    - run: yarn build
     # - run: yarn test
