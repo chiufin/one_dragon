@@ -35,7 +35,7 @@ jobs:
         ls ${{ github.workspace }}
     - run: echo "🍏 This job's status is ${{ job.status }}."
 
-  Build-Code:
+  Build-and-Test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -45,6 +45,6 @@ jobs:
         node-version: 16.x
         cache: 'yarn'
     - run: echo "🍏 This job's status is ${{ job.status }}."
-    - run: yarn
+    - run: yarn add -g create-react-app
     - run: yarn build
-    # - run: yarn test
+    - run: yarn test
