@@ -5,22 +5,23 @@ import image3 from './images/football.png';
 import image4 from './images/sandwich.png';
 import image5 from './images/study.png';
 import './App.css';
-import ReactGA from 'react-ga';
+//import ReactGA from 'react-ga';
+import AppConfig from './config/AppConfig';
 
 const images = [image1, image2, image3, image4, image5 ];
 
-function App() {
+const App = () => {
   const [imageIndex, setImageIndex] = useState(Math.floor(Math.random() * images.length));
   const [apiData, setApiData] = useState('');
 
   useEffect(() => {
-    ReactGA.initialize(process.env.REACT_APP_GA, {
-      gaOptions: {
-        siteSpeedSampleRate: 100,
-      }
-    });
-    ReactGA.pageview(window.location.pathname + window.location.search);
-    fetch(process.env.REACT_APP_BACKEND, {
+    //ReactGA.initialize(process.env.REACT_APP_GA, {
+    //  gaOptions: {
+    //    siteSpeedSampleRate: 100,
+    //  }
+    //});
+    //ReactGA.pageview(window.location.pathname + window.location.search);
+    fetch(AppConfig.backendURL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -31,7 +32,8 @@ function App() {
       .then(r => r.json())
       .then(data => {
         console.log('data returned:', data);
-        setApiData(data?.data?.hello);
+        const value = data && data.data && data.data.hello;
+        setApiData(value);
       });
   });
   return (
