@@ -1,0 +1,22 @@
+@keyframes pulse {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: -135% 0%;
+    }
+}
+
+.text-loading{
+    display: inline-block;
+    height: 100%;
+    width: 5.5em;
+    border-radius: 5px;
+    background: linear-gradient(-90deg, #282c34 0%, #eee 50%, #282c34 100%);
+    background-size: 400% 400%;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.text-loading::before {
+    content: "\00a0";
+}

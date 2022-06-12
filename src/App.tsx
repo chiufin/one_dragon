@@ -7,12 +7,14 @@ import image5 from './images/study.png';
 import './App.css';
 //import ReactGA from 'react-ga';
 import AppConfig from './config/AppConfig';
+import TextLoading from './Components/TextLoading';
 
 const images = [image1, image2, image3, image4, image5 ];
 
 const App = () => {
   const [imageIndex, setImageIndex] = useState(Math.floor(Math.random() * images.length));
   const [apiData, setApiData] = useState('');
+  const [loader, setLoader] = useState(true);
 
   useEffect(() => {
     //ReactGA.initialize(process.env.REACT_APP_GA, {
@@ -34,7 +36,11 @@ const App = () => {
         console.log('data returned:', data);
         const value = data && data.data && data.data.hello;
         setApiData(value);
-      });
+      })
+      .catch(err => {
+        console.warn(err);
+      })
+      .finally(() => setLoader(false));
   });
   return (
     <div
@@ -55,7 +61,7 @@ const App = () => {
         <p>
           Staccc's petite app
         </p>
-        <p>from graphql: {apiData}</p>
+        <p>from graphql: {loader ? <TextLoading /> : apiData}</p>
       </header>
     </div>
   );
