@@ -1,6 +1,9 @@
 # One dragon
-1. front end application: init project(create-react-app)
-2. backend application
+[staccc.uk](http://www.staccc.uk)
+
+0. design (created by staccc as well)
+1. front end application: init project(create-react-app) + typescript
+2. [backend application: express with graphql](https://github.com/chiufin/one_dragon_service)
 3. ci/cd: init ci/ci(GitHub Actions, Github Repository secrets)
    build -> test -> deploy
 4. deploy to heroku (because it is free)
@@ -8,10 +11,8 @@
 START TO IMPROVE THE CODE
 
 5. end to end testing
-6. typescript
 
 node v16.15.1 (npm v8.11.0)
-
 
 
 # Getting Started with Create React App
