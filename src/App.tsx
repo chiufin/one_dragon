@@ -63,7 +63,7 @@ const App = () => {
           className="App-logo"
           alt="logo"
         />
-        <p>
+        <p data-cy='app-title'>
           Staccc's petite app
         </p>
         
