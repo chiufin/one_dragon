@@ -14,6 +14,7 @@ START TO IMPROVE THE CODE
 
 node v16.15.1 (npm v8.11.0)
 
+use `npm` to run all scripts, because running on heruku is free.... XD
 
 # Getting Started with Create React App
 
@@ -21,7 +22,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run 
 
 ### `npm start`
 
